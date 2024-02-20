@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "./Components/Button.js";
 import Navbar from "./Components/navbar.js";
 
 function App() {
