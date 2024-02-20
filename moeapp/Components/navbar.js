@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
+
 function Navbar() {
-    const [click, setClick] = useState(false);
+
+ const [click, setClick] = useState(false);
 
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -9,11 +11,11 @@ function Navbar() {
     return (
     <nav className="navbar">
         <div className='navbar-container'>
-            <link to="/" className='navbar-logo'>
-                TRVL <i className='fab fa-typo'/>
-            </link>
+            <Link to="/" className='navbar-logo'>
+                Pursuit.bet
+            </Link>
             <div className='Menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars' } />
+            <i className={click ? '' : '' } />
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
@@ -21,9 +23,9 @@ function Navbar() {
                 Home
             </Link>
           </li>
-          <li className='nav-item'>
+          <li className='nav-crypto'>
             <Link to ='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
+                Contact
             </Link>
           </li>
             </ul>
